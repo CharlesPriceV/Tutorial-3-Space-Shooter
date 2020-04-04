@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject hazard;
+    public GameObject[] hazards;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
@@ -37,9 +37,9 @@ public class GameController : MonoBehaviour
     {
         if (restart)
         {
-            if (Input.GetKeyDown (KeyCode.R))
+            if (Input.GetKeyDown (KeyCode.F))
             {
-                SceneManager.LoadScene("Main");
+                SceneManager.LoadScene("Challenge 3");
             }
         }
     }
@@ -51,6 +51,7 @@ public class GameController : MonoBehaviour
         {
             for (int i = 0; i < hazardCount; i++)
             {
+                GameObject hazard = hazards[Random.Range (0, hazards.Length)];
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(hazard, spawnPosition, spawnRotation);
@@ -60,7 +61,7 @@ public class GameController : MonoBehaviour
 
             if (gameOver)
             {
-                restartText.text = "Press 'R' for Restart";
+                restartText.text = "Press 'F' for Restart";
                 restart = true;
                 break;
             }
@@ -75,12 +76,18 @@ public class GameController : MonoBehaviour
 
     void UpdateScore()
     {
-        ScoreText.text = "Score: " + score;
+        ScoreText.text = "Points: " + score;
+        if (score >= 100)
+        {
+            gameOverText.text = "You win! Game Created by Charles Price";
+            gameOver = true;
+            restart = true;
+        }
     }
 
     public void GameOver ()
     {
-        gameOverText.text = "Game Over! Game by Charles Price";
+        gameOverText.text = "Game Over! Game Created by Charles Price";
         gameOver = true;
     }
 
