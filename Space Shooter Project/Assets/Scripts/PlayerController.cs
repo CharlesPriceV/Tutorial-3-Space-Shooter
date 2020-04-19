@@ -22,10 +22,12 @@ public class PlayerController : MonoBehaviour
 
     private float nextFire;
 
+    private GameObject controller;
+
 
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        if (Input.GetButton("Fire1") && Time.time > nextFire && controller.GetComponent<GameController>().score < 200)
         {
             nextFire = Time.time + fireRate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        controller = GameObject.Find("GameController");
         rb = GetComponent<Rigidbody>();
     }
 

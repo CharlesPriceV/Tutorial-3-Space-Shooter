@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
     - BGScroller
     - DestroyByBoundary
@@ -9,7 +11,9 @@ ScriptsOnlyBuild:
     - GameController
     - Mover
     - PlayerController
+    - PowerupController
     - RandomRotator
+    - Readme
     - WeaponController
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -21,7 +25,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Challenge 3.unity:
+    Assets/Scenes/TheFinalProject.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -59,33 +63,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9674}
     - Class: 114
-      Script: {instanceID: 9824}
+      Script: {instanceID: 9682}
     - Class: 114
-      Script: {instanceID: 9870}
+      Script: {instanceID: 9826}
     - Class: 114
-      Script: {instanceID: 10016}
+      Script: {instanceID: 9872}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 9996}
     - Class: 114
-      Script: {instanceID: 10388}
+      Script: {instanceID: 10020}
     - Class: 114
-      Script: {instanceID: 10732}
+      Script: {instanceID: 10164}
     - Class: 114
-      Script: {instanceID: 10920}
+      Script: {instanceID: 10244}
     - Class: 114
-      Script: {instanceID: 10990}
+      Script: {instanceID: 10366}
     - Class: 114
-      Script: {instanceID: 11038}
+      Script: {instanceID: 10396}
     - Class: 114
-      Script: {instanceID: 11286}
+      Script: {instanceID: 10740}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 10928}
     - Class: 114
-      Script: {instanceID: 21186}
+      Script: {instanceID: 10998}
     - Class: 114
-      Script: {instanceID: 25622}
+      Script: {instanceID: 11046}
     - Class: 114
-      Script: {instanceID: 28564}
+      Script: {instanceID: 11294}
+    - Class: 114
+      Script: {instanceID: 11394}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -115,6 +121,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 76801541363f706d119976cc6c6207b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PowerupController
   - hash:
       serializedVersion: 2
       Hash: 3c08375166df118bd1801438fc36b92f
@@ -237,13 +249,19 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: de7d6a5820dded6c7f75780e98f1dc41
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponController
+  - hash:
+      serializedVersion: 2
       Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Done_Mover
   - hash:
       serializedVersion: 2
-      Hash: 8edd28b31dfb63ef8cac8a2a4f8143b7
+      Hash: 1e249167dd24998cdf180063c798d982
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -283,6 +301,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: f7df4bd62257d06fe7232d8dbdda2978
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EvasiveManeuver
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -325,6 +349,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Done_EvasiveManeuver
+  - hash:
+      serializedVersion: 2
+      Hash: be2d1663d6bc8ce39ce9c8dea6a963c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGScroller
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -631,26 +661,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: be2d1663d6bc8ce39ce9c8dea6a963c7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BGScroller
-  - hash:
-      serializedVersion: 2
-      Hash: de7d6a5820dded6c7f75780e98f1dc41
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WeaponController
-  - hash:
-      serializedVersion: 2
-      Hash: f7df4bd62257d06fe7232d8dbdda2978
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EvasiveManeuver
   platform: 5
   scenePathNames:
-  - Assets/Scenes/Challenge 3.unity
+  - Assets/Scenes/TheFinalProject.unity
   playerPath: C:/Users/CFPri/OneDrive/Desktop/GitHub/Tutorial 3 Space Shooter/Tutorial-3-Space-Shooter/Space
     Shooter Project/Builds/Space Shooter Project.exe
